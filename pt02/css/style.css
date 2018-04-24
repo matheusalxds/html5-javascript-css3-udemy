@@ -1,21 +1,43 @@
-
-
+* {
+  margin: 0px;
+  padding: 0px;
+}
 #paginaHome {
   background-color: grey;
   width: 1200px;
-  height: 100%;
   margin: auto;
   border: solid black 3px;
+  box-shadow: 10px 10px 15px grey;
 }
 
 #paginaHome header {
-  background-color: red;
   width: 100%;
   height: 170px;
 }
 
 #paginaHome header img {
-  float:left;
+  float: left;
   margin: 10px;
   width: 20%;
+}
+
+#paginaHome header h1 {
+  text-align: center;
+  padding-top: 25px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: Tahoma, Arial;
+  height: 90px;
+}
+
+#paginaHome header nav ol {
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+}
+
+#paginaHome header nav ol li {
+  width: 130px;
+  display: inline-block;
 }
