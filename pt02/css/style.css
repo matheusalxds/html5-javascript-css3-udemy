@@ -1,0 +1,21 @@
+
+
+#paginaHome {
+  background-color: grey;
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  border: solid black 3px;
+}
+
+#paginaHome header {
+  background-color: red;
+  width: 100%;
+  height: 170px;
+}
+
+#paginaHome header img {
+  float:left;
+  margin: 10px;
+  width: 20%;
+}
