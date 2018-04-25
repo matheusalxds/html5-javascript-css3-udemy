@@ -2,26 +2,25 @@
   margin: 0px;
   padding: 0px;
 }
-#paginaHome {
-  background-color: grey;
+#cointaner {
+  background-color: #ededed;
   width: 1200px;
   margin: auto;
-  border: solid black 3px;
-  box-shadow: 10px 10px 15px grey;
+  box-shadow: 10px 10px 15px black;
 }
 
-#paginaHome header {
+#cointaner header {
   width: 100%;
   height: 170px;
 }
 
-#paginaHome header img {
+#cointaner header img {
   float: left;
   margin: 10px;
   width: 20%;
 }
 
-#paginaHome header h1 {
+#cointaner header h1 {
   text-align: center;
   padding-top: 25px;
   color: white;
@@ -31,13 +30,48 @@
   height: 90px;
 }
 
-#paginaHome header nav ol {
+#cointaner header nav ol {
   list-style-type: none;
   text-align: center;
   width: 100%;
 }
 
-#paginaHome header nav ol li {
+#cointaner header nav ol li {
   width: 130px;
   display: inline-block;
+}
+
+#cointaner section {
+  width: 100%;
+  height: 600px;
+}
+
+#cointaner section nav {
+  width: 130px;
+  float: left;
+}
+
+#cointaner section h1 {
+  padding: 7px;
+  text-align: center;
+  font-size: 25px;
+}
+
+#cointaner section ol {
+  list-style-type: none;
+  text-align: center;
+}
+
+#cointaner section ol li {
+  padding: 10px;
+  border: solid 1px black;
+}
+
+#cointaner section ol li:hover {
+  background-color: aliceblue;
+}
+
+#cointaner footer {
+  text-align: center;
+  background-color: #bfbfbf;
 }
