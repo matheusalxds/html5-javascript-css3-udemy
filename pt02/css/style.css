@@ -107,3 +107,22 @@ article p {
   margin: 10px;
   width: 20%;
 }
+
+#home #firstArticle {
+  margin-bottom: 50px;
+  height: 50%;
+}
+
+#home #secondArticle #firstSection{
+  float: left;
+  width: 49%;
+  height: 100%;
+  background-color: grey;
+  margin-lef: 4px;
+}
+#home #secondArticle #secondSection{
+  float: right;
+  width: 49%;
+  height: 100%;
+  background-color: #bfbfbf;
+}
