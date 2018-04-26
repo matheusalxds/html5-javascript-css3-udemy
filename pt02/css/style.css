@@ -110,6 +110,18 @@ article p {
   margin: 10px;
 }
 
+article nav ol li {
+  display: inline;
+  font-size: 20px;
+  text-align: left;
+  color: blue;
+  font-family: Tahoma, Arial;
+  margin: 10px;
+}
+article nav ol li a {
+  text-decoration: none;
+}
+
 .formatterImg {
   float: left;
   margin: 10px;
