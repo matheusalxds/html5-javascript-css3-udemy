@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<article>
+  <header>
+    <h1>
+      Suggestion about autocomplete
+    </h1>
+    <p>
+      Elements: INPUT & FORM
+    </p>
+  </header>
+</article>
+<div class="container">
+  <form>
+    <div class="custom-input">
+      <label for="name">Name</label>
+      <input autocomplete="on" autofocus id="name" placeholder="Write your name..." maxlength="50" required>
+    </div>
+    <br>
+    <br>
+    <label for="cpf">CPF</label>
+    <input autocomplete="off" id="cpf" placeholder="999.999.999-99" size="14" maxlength="14">
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+</body>
+</html>
