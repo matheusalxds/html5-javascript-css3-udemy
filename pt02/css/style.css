@@ -20,6 +20,14 @@
   width: 20%;
 }
 
+#container nav ol li a {
+  text-decoration: none;
+}
+
+#container nav ol li a:hover {
+  color: white;
+}
+
 #container header h1 {
   text-align: center;
   padding-top: 25px;
@@ -120,6 +128,25 @@ article p {
   background-color: grey;
   margin-lef: 4px;
 }
+
+#home #secondArticle #firstSection footer a {
+  text-decoration: none;
+  font-weight: normal;
+}
+#home #secondArticle #firstSection footer a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#home #secondArticle #secondSection footer a {
+  text-decoration: none;
+  font-weight: normal;
+}
+#home #secondArticle #secondSection footer a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 #home #secondArticle #secondSection{
   float: right;
   width: 49%;
