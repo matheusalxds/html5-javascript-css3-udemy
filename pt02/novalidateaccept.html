@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<article>
+  <header>
+    <h1>
+      Form attributes: Novalidate, accept and accept-charset
+    </h1>
+    <p>
+      Novalidate will ignore every "required" of the form
+    </p>
+    <p>
+      Accept define the upload file type
+    </p>
+    <p>
+      Accept-charset define the codification of characters that will be send by form
+    </p>
+  </header>
+</article>
+<div class="container">
+  <form novalidate accept="image/png, image/jpeg" accept-charset="ISO-8859-1">
+    <div class="custom-input">
+      <label for="name">Name</label>
+      <input autocomplete="on" autofocus id="name" placeholder="Write your name..." maxlength="50" required>
+    </div>
+    <br>
+    <br>
+    <label for="cpf">CPF</label>
+    <input autocomplete="off" id="cpf" placeholder="999.999.999-99" size="14" maxlength="14">
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+    <p>
+      <input type="image" src="img/logo.png" class="formatterImg">
+    </p>
+  </form>
+</div>
+</body>
+</html>
