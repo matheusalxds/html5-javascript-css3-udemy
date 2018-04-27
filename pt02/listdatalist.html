@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<article>
+  <header>
+    <h1>
+      List & Datalist
+    </h1>
+    <p>
+      Show an option list to fill the input text field
+    </p>
+  </header>
+</article>
+<div class="container">
+  <form autocomplete="on">
+    <div class="custom-input">
+      <label for="name">Course</label>
+      <input id="name" list="dataList">
+    </div>
+    <br>
+    <datalist id="dataList">
+      <option value="op01" label="html01">
+      <option value="op02" label="html02">
+      <option value="op03" label="html03l"> 
+    </datalist>
+  </form>
+</div>
+</body>
+</html>
