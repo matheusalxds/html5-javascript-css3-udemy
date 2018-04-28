@@ -9,21 +9,32 @@
 <article>
   <header>
     <h1>
-      Form attributes: Novalidate, accept and accept-charset
+      Form attributes: Action, Method and Enctype
     </h1>
     <p>
-      Novalidate will ignore every "required" of the form
+      Action define the action, what file will receive the data from form
     </p>
+    <h1>Method</h1>
     <p>
-      Accept define the upload file type
+      <br>
+      GET -> Appear in url
+      <br>
+      POST -> Not appear in url
     </p>
+    <h1>Enctype</h1>
     <p>
-      Accept-charset define the codification of characters that will be send by form
+      How the data will be codified behind to send
+      <br>
+      application/x-www-form-urlencoded
+      <br>
+      text/plain
+      <br>
+      multipart/form-data
     </p>
   </header>
 </article>
 <div class="container">
-  <form novalidate accept="image/png, image/jpeg" accept-charset="ISO-8859-1">
+  <form action="action.js" method="get" enctype="application/x-www-form-urlencoded">
     <div class="custom-input">
       <label for="name">Name</label>
       <input autocomplete="on" autofocus id="name" placeholder="Write your name..." maxlength="50" required>
