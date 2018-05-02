@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<article>
+  <header>
+    <h1>
+      Attribute target from element FORM
+    </h1>
+    <h2>
+      _black: Open new window
+      _self: Open new tab
+      _parent: Open on father
+      _top: Open in the same page but fullscreen
+    </h2>
+  </header>
+</article>
+<div class="container">
+  <form method="get" target="_top" action="contactus.html" enctype="application/x-www-form-urlencoded" id="myForm">
+    <div class="custom-input">
+      <label for="name">Name</label>
+      <input autocomplete="on" autofocus id="name" placeholder="Write your name..." maxlength="50" required>
+    </div>
+    <br>
+    <br>
+    <label for="cpf">CPF</label>
+    <input autocomplete="off" id="cpf" placeholder="999.999.999-99" size="14" maxlength="14">
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+  <p>This button wasn't in form</p>
+  <label for="email">Email</label>
+  <input id="email" form="myForm" name="email">
+  <br>
+  <button form="myForm" type="submit">Submit</button>
+</div>
+</body>
+</html>
