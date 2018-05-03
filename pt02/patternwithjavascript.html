@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<article>
+  <header>
+    <h1>
+      Attribute pattern from element FORM using javascript file
+    </h1>
+    <h2>
+      Will add mask on input, need to write text like placeholder to submit but using javascript file
+    </h2>
+  </header>
+</article>
+<div class="container">
+  <form method="get" target="_top" action="contactus.html" enctype="application/x-www-form-urlencoded" id="myForm">
+    <br>
+    <label for="phone">Phone</label>
+    <input onblur="parsePhone(this)" type="text" name="phone" id="phone" placeholder="(0xx99)9999-9999" required>
+    <br>
+    <label for="phone2">Phone</label>
+    <input pattern="\(0xx[0-9]{2}\)[0-9]{4}-[0-9]{4}" type="text" name="phone" id="phone2" placeholder="(0xx99)9999-9999" required>
+    <div id="divError" style="color:red;"></div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+</body>
+<script>
+  var phoneMask = /\(0xx[0-9]{2}\)[0-9]{4}-[0-9]{4}$/;
+  function parsePhone(input) {
+    if(input) console.log(input.value);
+    if(!phoneMask.test(input.value)) {
+      console.log('if');
+      input.setCustomValidity('Invalid value, try again')
+    } else {
+      console.log('else');
+      input.setCustomValidity('');
+    }
+
+    document.getElementById('divError').innerHTML = input.validationMessage;
+  }
+</script>
+</html>
