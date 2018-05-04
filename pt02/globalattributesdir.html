@@ -44,7 +44,21 @@
     <p style="direction: rtl"> RTL
       Some text ...
     </p>
+    <hr>
+    <br>
+    <button type="button" onclick="ltf()">LTR</button>
+    <button type="button" onclick="rtl()">RTL</button>
+    <p id="shift">Text</p>
   </form>
 </div>
 </body>
+<script>
+  function rtl(){
+    document.getElementById('shift').dir = 'rtl';
+  }
+
+  function ltf() {
+    document.getElementById('shift').dir = 'ltf';
+  }
+</script>
 </html>
