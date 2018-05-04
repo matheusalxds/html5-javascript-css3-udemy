@@ -86,17 +86,17 @@
     <br>
     <p>
       <label> Tel
-        <input type="tel">
+        <input id="phone" pattern="\(0xx[0-9]{2}\)[0-9]{4}-[0-9]{4}" placeholder="(0xx99)9999-9999"  type="tel">
       </label>
     </p>
     <p>
       <label> Email
-        <input type="email">
+        <input id="email" type="email">
       </label>
     </p>
     <p>
       <label> Url
-        <input type="url">
+        <input id="url" type="url">
       </label>
     </p>
     <p>
@@ -157,4 +157,11 @@
   </form>
 </div>
 </body>
+<style>
+  #phone:valid { background: limegreen; }
+  #url:valid { background: limegreen; }
+  #email:valid { background: limegreen; }
+  #email:invalid { background: red; }
+  /*#phone:invalid { background: red; }*/
+</style>
 </html>
