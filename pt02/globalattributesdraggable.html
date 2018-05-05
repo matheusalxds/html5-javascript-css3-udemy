@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <title>Learning how the HTML5 works</title>
   <link href="css/style.css" rel="stylesheet">
+  <script type="text/javascript">
+    function dragStart(event){
+      event.dataTransfer.setData("Id", event.get.target.getAttribute('id'));
+    }
+  </script>
   <style>
 
     #prod, #cart {
@@ -19,6 +24,20 @@
     }
     #cart {
       background-color: aqua;
+    }
+
+    #product01, #product02, #product03 {
+      margin-bottom: 5px;
+    }
+
+    #product01 {
+      background-color: #575757;
+    }
+    #product02 {
+      background-color: #777777;
+    }
+    #product03 {
+      background-color: #acacac;
     }
   </style>
 </head>
@@ -37,6 +56,15 @@
   <form>
     <div id="prod">
       Product list
+      <div id="product01" draggable="true">
+        HTML5
+      </div>
+      <div id="product02" draggable="true">
+        Android
+      </div>
+      <div id="product03" draggable="true">
+        iOS
+      </div>
     </div>
     <div id="cart">
       cart
