@@ -6,7 +6,16 @@
   <link href="css/style.css" rel="stylesheet">
   <script type="text/javascript">
     function dragStart(event){
-      event.dataTransfer.setData("Id", event.get.target.getAttribute('id'));
+      event.dataTransfer.setData("_id", event.target.getAttribute('id'));
+    }
+
+    function dragOver(event) {
+      return false;
+    }
+
+    function dragDrop(event) {
+      var currentItem = event.dataTransfer.getData('_id');
+      event.target.appendChild(document.getElementById(currentItem));
     }
   </script>
   <style>
@@ -54,19 +63,19 @@
 </article>
 <div>
   <form>
-    <div id="prod">
+    <div id="prod" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">
       Product list
-      <div id="product01" draggable="true">
+      <div id="product01" draggable="true" ondragstart="return dragStart(event)">
         HTML5
       </div>
-      <div id="product02" draggable="true">
+      <div id="product02" draggable="true" ondragstart="return dragStart(event)">
         Android
       </div>
-      <div id="product03" draggable="true">
+      <div id="product03" draggable="true" ondragstart="return dragStart(event)">
         iOS
       </div>
     </div>
-    <div id="cart">
+    <div id="cart" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">
       cart
     </div>
   </form>
