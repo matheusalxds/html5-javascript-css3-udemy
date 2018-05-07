@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<article>
+  <header>
+    <h1>
+      About Clicks
+    </h1>
+    <p>
+      onfocus: will do something when the input get the focus (on input)
+    </p>
+    <p>
+      onclick: Just one click (on button)
+    </p>
+    <p>
+      ondblclick: Double Click (on button)
+    </p>
+  </header>
+</article>
+<div>
+  <form>
+    <label for="name">Name</label>
+    <input id="name" onfocus="onFocus();"/>
+    <button type="button" onclick="onClick()" value="BTN CLICKED">One Click</button>
+    <button type="button" ondblclick="onDoubleClick()" value="BTN 2 CLICKEDs">Double Click</button>
+  </form>
+</div>
+</body>
+<script type="text/javascript">
+  function  onFocus() {
+    alert('Got focus');
+  }
+  function onClick() {
+    alert('Clicked');
+  }
+
+  function onDoubleClick() {
+    alert('Double Click');
+  }
+</script>
+</html>
