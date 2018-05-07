@@ -30,23 +30,19 @@
     }
 
     function increaseFont(multiplier) {
-      console.log('cliked');
       var text = document.getElementById('text01');
       if (text.style.fontSize == '') {
         text.style.fontSize = '16px';
       } else {
         text.style.fontSize = parseInt(text.style.fontSize) + parseInt((multiplier * 0, 2)) + 'px';
-        console.log('new size', text.style.fontSize);
       }
     }
     function decreaseFont(multiplier) {
-      console.log('cliked');
       var text = document.getElementById('text01');
       if (text.style.fontSize == '') {
         text.style.fontSize = '16px';
       } else {
         text.style.fontSize = parseInt(text.style.fontSize) - parseInt((multiplier * 0, 2)) + 'px';
-        console.log('new size', text.style.fontSize);
       }
     }
 
