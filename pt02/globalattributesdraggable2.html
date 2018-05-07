@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <link href="css/style.css" rel="stylesheet">
+  <style>
+
+    #prod, #cart {
+      float: left;
+      width: 350px;
+      height: 350px;
+      padding: 10px;
+      margin: 12px;
+    }
+
+    #prod {
+      background-color: #bfbfbf;
+    }
+
+    #cart {
+      background-color: aqua;
+    }
+
+    #product01, #product02, #product03 {
+      margin-bottom: 5px;
+    }
+
+    #product01 {
+      background-color: #575757;
+    }
+
+    #product02 {
+      background-color: #777777;
+    }
+
+    #product03 {
+      background-color: #acacac;
+    }
+  </style>
+</head>
+<body>
+<article>
+  <header>
+    <h1>
+      Draggable
+    </h1>
+    <h3>
+      Allow to drag and drop the items (true, false ou auto)
+    </h3>
+  </header>
+</article>
+<div>
+  <form>
+    <div id="prod">
+      Product list
+      <img src="img/logo.png" id="img1" class="formatterImg"/>
+      <img src="img/logo.png" id="img2" class="formatterImg"/>
+      <img src="img/logo.png" id="img3" class="formatterImg"/>
+    </div>
+    <div id="cart">
+      cart
+    </div>
+    <script>
+      var drop = document.getElementById('cart');
+      drop.ondragover = function (event) {
+        return false;
+      };
+      drop.ondrop = function (event) {
+        event = event || window.event;
+        this.innerHTML += '<p>' + event.dataTransfer.getData('text') + '</p>';
+      };
+    </script>
+  </form>
+</div>
+</body>
+</html>
