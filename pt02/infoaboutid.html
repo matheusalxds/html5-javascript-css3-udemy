@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <style type="text/css">
+    #home {
+      margin: 10px auto;
+      width: 500px;
+      height: 500px;
+      background: #777777;
+    }
+
+    #text01 {
+      background: #053f6b;
+    }
+
+    #text02 {
+      background: #055b91;
+    }
+
+    #text03 {
+      background: #0578bc;
+    }
+  </style>
+  <script type="text/javascript">
+    function increaseFont26px() {
+      var text = document.getElementById('text01');
+      text.style.fontSize = '26px';
+    }
+
+    function increaseFont(multiplier) {
+      console.log('cliked');
+      var text = document.getElementById('text01');
+      if (text.style.fontSize == '') {
+        text.style.fontSize = '16px';
+      } else {
+        text.style.fontSize = parseInt(text.style.fontSize) + parseInt((multiplier * 0, 2)) + 'px';
+        console.log('new size', text.style.fontSize);
+      }
+    }
+    function decreaseFont(multiplier) {
+      console.log('cliked');
+      var text = document.getElementById('text01');
+      if (text.style.fontSize == '') {
+        text.style.fontSize = '16px';
+      } else {
+        text.style.fontSize = parseInt(text.style.fontSize) - parseInt((multiplier * 0, 2)) + 'px';
+        console.log('new size', text.style.fontSize);
+      }
+    }
+
+    function decreaseFont16px() {
+      var text = document.getElementById('text01');
+      text.style.fontSize = '16px';
+    }
+  </script>
+</head>
+<body>
+<div id="home">
+  <p>
+    <a href="#" onclick="increaseFont()">Increasing</a> |
+    <a href="#" onclick="decreaseFont()">Decreasing</a> |
+    <a href="javascript: increaseFont26px()">Increase to 26px </a> |
+    <a href="javascript: decreaseFont16px()">Decrease to 16px </a>
+  <p id="text01">
+    01 - Whether article spirits new her covered hastily sitting her. Money witty books nor son add. Chicken age had
+    evening
+    believe but proceed pretend mrs. At missed advice my it no sister. Miss told ham dull knew see she spot near can.
+    Spirit her entire her called.
+  </p>
+  <p id="text02">
+    02 - Whether article spirits new her covered hastily sitting her. Money witty books nor son add. Chicken age had
+    evening
+    believe but proceed pretend mrs. At missed advice my it no sister. Miss told ham dull knew see she spot near can.
+    Spirit her entire her called.
+  </p>
+  <p id="text03">
+    03 - Whether article spirits new her covered hastily sitting her. Money witty books nor son add. Chicken age had
+    evening
+    believe but proceed pretend mrs. At missed advice my it no sister. Miss told ham dull knew see she spot near can.
+    Spirit her entire her called.
+  </p>
+</div>
+</body>
+</html>
