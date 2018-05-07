@@ -20,6 +20,17 @@
     <p>
       ondblclick: Double Click (on button)
     </p>
+    <p>
+      onmousedown: you can click using right or left button from mouse (mouse down)
+    </p>
+    <p>
+      onmouseup: you can click using right or left button from mouse (mouse up)
+    </p>
+    <p>
+      onmousemove: you just need to move the mouse on the label (in)
+    </p><p>
+      onmouseout: you just need to move the mouse on the label (out)
+    </p>
   </header>
 </article>
 <div>
@@ -27,11 +38,27 @@
     <label for="name">Name</label>
     <input id="name" onfocus="onFocus();"/>
     <button type="button" onclick="onClick()" value="BTN CLICKED">One Click</button>
-    <button type="button" ondblclick="onDoubleClick()" value="BTN 2 CLICKEDs">Double Click</button>
+    <button type="button" ondblclick="onDoubleClick()" value="BTN 2 CLICKEDs">Double Click</button><br><br>
+    <label onmousedown="onMouseDown()">onMouseDown</label><br><br>
+    <label onmouseup="onMouseUp()">onMouseUp</label><br><br>
+    <label onmousemove="onMouseMove()">onMouseMove</label><br><br>
+    <label onmouseout="onMouseOut()">onMouseOut</label><br><br>
   </form>
 </div>
 </body>
 <script type="text/javascript">
+  function onMouseOut() {
+    alert('On mouse move');
+  }
+  function onMouseMove() {
+    alert('On mouse move');
+  }
+  function onMouseDown() {
+    alert('On mouse down');
+  }
+  function onMouseUp() {
+    alert('On mouse up');
+  }
   function  onFocus() {
     alert('Got focus');
   }
