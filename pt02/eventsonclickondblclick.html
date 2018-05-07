@@ -28,8 +28,27 @@
     </p>
     <p>
       onmousemove: you just need to move the mouse on the label (in)
-    </p><p>
+    </p>
+    <p>
       onmouseout: you just need to move the mouse on the label (out)
+    </p>
+    <p>
+      onblur: after go out from input
+    </p>
+    <p>
+      onchange: after submit
+    </p>
+    <p>
+      oninput: after write each character
+    </p>
+    <p>
+      onkeypress/onkeyup/onkeydown: using key's from keyboard
+    </p>
+    <p>
+      onselect: after select some text
+    </p>
+    <p>
+      onmouseover: like on mouse move
     </p>
   </header>
 </article>
@@ -38,30 +57,73 @@
     <label for="name">Name</label>
     <input id="name" onfocus="onFocus();"/>
     <button type="button" onclick="onClick()" value="BTN CLICKED">One Click</button>
-    <button type="button" ondblclick="onDoubleClick()" value="BTN 2 CLICKEDs">Double Click</button><br><br>
+    <button type="button" ondblclick="onDoubleClick()" value="BTN 2 CLICKEDs">Double Click</button>
+    <br><br>
     <label onmousedown="onMouseDown()">onMouseDown</label><br><br>
     <label onmouseup="onMouseUp()">onMouseUp</label><br><br>
     <label onmousemove="onMouseMove()">onMouseMove</label><br><br>
     <label onmouseout="onMouseOut()">onMouseOut</label><br><br>
+    <input type="text" placeholder="onBlur" onblur="onBlur()"/><br><br>
+    <input type="text" placeholder="onChange" onchange="onChange()"/><br><br>
+    <input type="text" placeholder="onInput" oninput="onInput()"/><br><br>
+    <input type="text" placeholder="onKeyUp" onkeyup="onKeyUp(event)"/><br><br>
+    <input type="text" placeholder="onKeyPress" onkeypress="onKeyPress()"/><br><br>
+    <input type="text" placeholder="onSelect" onselect="onSelect()"/><br><br>
+    <img src="img/logo.png" class="formatterImg" onmouseover="onMouseOver()" />
   </form>
 </div>
 </body>
 <script type="text/javascript">
+  function onMouseOver() {
+    alert('Selected')
+  }
+  function onSelect() {
+    alert('Selected')
+  }
+  function onKeyPress() {
+    alert('Pressed the key');
+  }
+  function onKeyUp(event) {
+    var value = event.which || event.keyCode;
+    if(value == 27) {
+      alert('Press esc');
+    } else {
+      alert('value' + value);
+    }
+  }
+
+  function onInput() {
+    alert('on Input');
+  }
+
+  function onChange() {
+    alert('On change after enter');
+  }
+
+  function onBlur() {
+    alert('On blur');
+  }
+
   function onMouseOut() {
     alert('On mouse move');
   }
+
   function onMouseMove() {
     alert('On mouse move');
   }
+
   function onMouseDown() {
     alert('On mouse down');
   }
+
   function onMouseUp() {
     alert('On mouse up');
   }
-  function  onFocus() {
+
+  function onFocus() {
     alert('Got focus');
   }
+
   function onClick() {
     alert('Clicked');
   }
