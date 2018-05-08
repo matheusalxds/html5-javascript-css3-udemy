@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <script src="js/canvas.js"></script>
+</head>
+<body>
+<article>
+  <header>
+    <h1>
+      Canvas: It allows to design graph's in real time
+    </h1>
+  </header>
+</article>
+<div class="home">
+  <form>
+    <canvas id="canvasTest">
+    </canvas>
+    <canvas id="canvasTest2">
+    </canvas>
+    <script>
+      // var design = document.querySelector('canvas').getContext('2d');
+      // Element Test
+      var canvas = document.getElementById('canvasTest');
+      var design = canvas.getContext('2d');
+      design.fillStyle = 'rgb(200,34,79)';
+      design.fillRect(50, 50, 50, 50);
+      design.clearRect(60, 60, 30, 30);
+      design.strokeStyle = '#000';
+      design.lineWidth = 5;
+      design.strokeRect(49, 49, 51, 51);
+
+      // Element Test 2
+      var canvas = document.getElementById('canvasTest2');
+      var design = canvas.getContext('2d');
+      design.fillStyle = 'rgb(130,47,150)';
+      design.fillRect(100, 50, 200, 200);
+      design.clearRect(110, 80, 60, 60);
+    </script>
+  </form>
+</div>
+</body>
+</html>
