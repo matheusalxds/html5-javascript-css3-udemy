@@ -174,8 +174,7 @@ article nav ol li a {
 .canvas {
   box-sizing: border-box;
   background: #0578bc;
-  margin-left: 200px;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   border: 1px solid #000;
 }
