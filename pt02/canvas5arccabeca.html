@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<article>
+  <header>
+    <h1>
+      Canvas: It allows to design graph's in real time
+    </h1>
+  </header>
+</article>
+<div>
+  <form>
+    <canvas width="800" height="600">
+    </canvas>
+    <script>
+      var canvas = document.querySelector('canvas'), ctx = canvas.getContext('2d');
+      ctx.beginPath();
+      ctx.arc(400, 300, 150, 0, Math.PI * 2, false);
+      ctx.fillStyle = '#bcc';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.lineWidth = 10;
+      ctx.strokeStyle = '#ff0000';
+      ctx.arc(400, 300, 100, 0, Math.PI, false);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.fillStyle = '#ff0000';
+      ctx.arc(340, 260, 10, 0, Math.PI*2, false);
+      ctx.arc(450, 260, 10, 0, Math.PI*2, false);
+      ctx.fill();
+    </script>
+  </form>
+</div>
+</body>
+</html>
