@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <link href="css/style.css" rel="stylesheet">
+  <script type="text/javascript">
+    function play() {
+      var music = document.getElementById('music');
+      var controller = document.getElementById('controller');
+      var btnPlay = controller.querySelector('#play');
+      var btnPause = controller.querySelector('#pause');
+      var btnUp = controller.querySelector('#up');
+      var btnDown = controller.querySelector('#down');
+      btnPlay.addEventListener('click', function () {
+        music.play();
+      }, false);
+
+      btnPause.addEventListener('click', function () {
+        music.pause();
+      }, false);
+
+      btnUp.addEventListener('click', function () {
+        if (music.volume < 1) {
+          music.volume += 0.1;
+        }
+      }, false);
+      btnDown.addEventListener('click', function () {
+        if (music.volume >= 0.1) {
+          console.log('time', music.currentTime)
+          music.volume -= 0.1;
+        }
+      }, false);
+
+    }
+
+    function updateTrackTime() {
+      var music = document.getElementById('music');
+      var seconds = (music.currentTime % 60).toFixed(0);
+      seconds = (seconds >= 10) ? seconds : "0" + seconds;
+      var minutes = (Math.floor(music.currentTime / 60)).toFixed(0);
+      minutes = (minutes >= 10) ? minutes : "0" + minutes;
+      document.getElementById('trackTime').innerHTML = minutes + ':' + seconds;
+    }
+    window.onload = play;
+  </script>
+</head>
+<body>
+<article>
+  <header>
+    <h1>
+      Audio: src, autoplay, loop, controls, preload(will say if the audio will be load or not when you start the
+      application)
+    </h1>
+    <h3>
+      Using Javascript
+    </h3>
+  </header>
+</article>
+<div class="home">
+  <form>
+    <audio src="sounds/Poesia_Acustica_3_capricorniana.mp3" loop id="music" ontimeupdate="updateTrackTime()"></audio>
+    <div id="controller">
+      <input type="button" value="Play" id="play">
+      <input type="button" value="Pause" id="pause">
+      <input type="button" value="+ Vol" id="up">
+      <input type="button" value="- Vol" id="down">
+      <span id="trackTime" />
+    </div>
+  </form>
+</div>
+</body>
+</html>
