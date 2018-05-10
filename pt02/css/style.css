@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
 }
+
 #container {
   background-color: #ededed;
   width: 1300px;
@@ -118,6 +119,7 @@ article nav ol li {
   font-family: Tahoma, Arial;
   margin: 10px;
 }
+
 article nav ol li a {
   text-decoration: none;
 }
@@ -133,7 +135,7 @@ article nav ol li a {
   height: 50%;
 }
 
-#home #secondArticle #firstSection{
+#home #secondArticle #firstSection {
   float: left;
   width: 49%;
   height: 100%;
@@ -145,6 +147,7 @@ article nav ol li a {
   text-decoration: none;
   font-weight: normal;
 }
+
 #home #secondArticle #firstSection footer a:hover {
   text-decoration: underline;
   font-weight: bold;
@@ -154,27 +157,57 @@ article nav ol li a {
   text-decoration: none;
   font-weight: normal;
 }
+
 #home #secondArticle #secondSection footer a:hover {
   text-decoration: underline;
   font-weight: bold;
 }
 
-#home #secondArticle #secondSection{
+#home #secondArticle #secondSection {
   float: right;
   width: 49%;
   height: 100%;
   background-color: #bfbfbf;
 }
+
 .home {
   width: 800px;
   height: 600px;
   background-color: #acacac;
   margin: 30px auto;
 }
+
 .canvas {
   box-sizing: border-box;
   background: #0578bc;
   width: 100%;
   height: 100%;
   border: 1px solid #000;
+}
+/** Config for player */
+
+.myPlayer {
+  background-color: #acacac;
+  box-sizing: border-box;
+  width: 800px;
+  height: 600px;
+  margin: 30px auto;
+  padding: 100px;
+}
+
+.trackTime {
+  border-bottom: solid 1px black;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.btn {
+  border: solid 1px black;
+  width: 100px;
+  height: 25px;
+  font-size: 15px;
+}
+
+.controller form, div, input, span {
+  border-radius: 10px;
 }
