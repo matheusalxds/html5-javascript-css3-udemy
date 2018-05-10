@@ -5,13 +5,23 @@
   <title>Learning how the HTML5 works</title>
   <link href="css/style.css" rel="stylesheet">
   <script type="text/javascript">
+
+    function getId(id) {
+      return document.getElementById(id);
+    }
+
     function play() {
-      var music = document.getElementById('music');
-      var controller = document.getElementById('controller');
-      var btnPlay = controller.querySelector('#play');
-      var btnPause = controller.querySelector('#pause');
-      var btnUp = controller.querySelector('#up');
-      var btnDown = controller.querySelector('#down');
+      // var music = document.getElementById('music');
+      // var controller = document.getElementById('controller');
+      // var btnPlay = controller.querySelector('#play');
+      // var btnPause = controller.querySelector('#pause');
+      // var btnUp = controller.querySelector('#up');
+      // var btnDown = controller.querySelector('#down');
+      var music = getId('music');
+      var btnPlay = getId('play');
+      var btnPause = getId('pause');
+      var btnUp = getId('up');
+      var btnDown = getId('down');
       btnPlay.addEventListener('click', function () {
         music.play();
       }, false);
