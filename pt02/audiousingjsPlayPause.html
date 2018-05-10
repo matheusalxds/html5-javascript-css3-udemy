@@ -16,12 +16,10 @@
       var playPause = function () {
         if (music.paused && !music.ended) {
           music.play();
-          console.log('if');
           btnPlay.innerHTML = '&#x2588; &#x2588;';
         }
         else {
           music.pause();
-          console.log('else');
           btnPlay.innerHTML = '&#x25B6;';
         }
       };
@@ -50,7 +48,7 @@
   <form>
     <audio src="sounds/Poesia_Acustica_3_capricorniana.mp3" loop id="music" ontimeupdate="updateTrackTime()"></audio>
     <div id="controller" class="controller">
-      <button id="play" class="btn"></button>
+      <button type="button" id="play" class="btn"></button>
       <span id="trackTime"/>
     </div>
   </form>
