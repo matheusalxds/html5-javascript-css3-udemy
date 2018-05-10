@@ -33,38 +33,30 @@
       }, false);
 
     }
-
     function updateTrackTime() {
       var music = document.getElementById('music');
       var seconds = (music.currentTime % 60).toFixed(0);
       seconds = (seconds >= 10) ? seconds : "0" + seconds;
       var minutes = (Math.floor(music.currentTime / 60)).toFixed(0);
       minutes = (minutes >= 10) ? minutes : "0" + minutes;
+      document.getElementById('trackTime').classList.add('trackTime');
       document.getElementById('trackTime').innerHTML = minutes + ':' + seconds;
     }
     window.onload = play;
   </script>
 </head>
 <body>
-<article>
-  <header>
-    <h1>
-      Audio: src, autoplay, loop, controls, preload(will say if the audio will be load or not when you start the
-      application)
-    </h1>
-    <h3>
-      Using Javascript
-    </h3>
-  </header>
-</article>
-<div class="home">
+<div class="myPlayer">
+  <h3>
+    My own player using Javascript to controll all the functions
+  </h3>
   <form>
     <audio src="sounds/Poesia_Acustica_3_capricorniana.mp3" loop id="music" ontimeupdate="updateTrackTime()"></audio>
-    <div id="controller">
-      <input type="button" value="Play" id="play">
-      <input type="button" value="Pause" id="pause">
-      <input type="button" value="+ Vol" id="up">
-      <input type="button" value="- Vol" id="down">
+    <div id="controller" class="controller">
+      <input type="button" value="Play" id="play" class="btn">
+      <input type="button" value="Pause" id="pause" class="btn">
+      <input type="button" value="+ Vol" id="up" class="btn">
+      <input type="button" value="- Vol" id="down" class="btn">
       <span id="trackTime" />
     </div>
   </form>
