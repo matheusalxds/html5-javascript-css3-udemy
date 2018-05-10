@@ -17,57 +17,76 @@
       // var btnPause = controller.querySelector('#pause');
       // var btnUp = controller.querySelector('#up');
       // var btnDown = controller.querySelector('#down');
-      var music = getId('music');
+      var video = getId('video');
       var btnPlay = getId('play');
       var btnPause = getId('pause');
       var btnUp = getId('up');
       var btnDown = getId('down');
       btnPlay.addEventListener('click', function () {
-        music.play();
+        video.play();
       }, false);
 
       btnPause.addEventListener('click', function () {
-        music.pause();
+        video.pause();
       }, false);
 
       btnUp.addEventListener('click', function () {
-        if (music.volume < 1) {
-          music.volume += 0.1;
+        if (video.volume < 1) {
+          video.volume += 0.1;
         }
       }, false);
       btnDown.addEventListener('click', function () {
-        if (music.volume >= 0.1) {
-          console.log('time', music.currentTime)
-          music.volume -= 0.1;
+        if (video.volume >= 0.1) {
+          console.log('time', video.currentTime)
+          video.volume -= 0.1;
         }
       }, false);
 
     }
+
     function updateTrackTime() {
-      var music = document.getElementById('music');
-      var seconds = (music.currentTime % 60).toFixed(0);
+      var video = document.getElementById('video');
+      var seconds = (video.currentTime % 60).toFixed(0);
       seconds = (seconds >= 10) ? seconds : "0" + seconds;
-      var minutes = (Math.floor(music.currentTime / 60)).toFixed(0);
+      var minutes = (Math.floor(video.currentTime / 60)).toFixed(0);
       minutes = (minutes >= 10) ? minutes : "0" + minutes;
       document.getElementById('trackTime').classList.add('trackTime');
       document.getElementById('trackTime').innerHTML = minutes + ':' + seconds;
     }
+
     window.onload = play;
   </script>
 </head>
 <body>
+<article>
+  <header>
+    <h1>
+      About video using JS
+    </h1>
+    <h3>
+      <p>
+        Attributes: (has the same attributes as the video)
+      </p>
+      <p>
+        poster: it'll set poster of video (initial img before start the video)
+      </p>
+    </h3>
+  </header>
+</article>
 <div class="myPlayer">
   <h3>
     My own player using Javascript to control all the functions
   </h3>
   <form>
-    <audio src="sounds/Poesia_Acustica_3_capricorniana.mp3" loop id="music" ontimeupdate="updateTrackTime()"></audio>
+    <video loop id="video" ontimeupdate="updateTrackTime()">
+      <source src="video/video.mp4" type="video/mp4">
+    </video>
     <div id="controller" class="controller">
       <input type="button" value="Play" id="play" class="btn">
       <input type="button" value="Pause" id="pause" class="btn">
       <input type="button" value="+ Vol" id="up" class="btn">
       <input type="button" value="- Vol" id="down" class="btn">
-      <span id="trackTime" />
+      <span id="trackTime"/>
     </div>
   </form>
 </div>

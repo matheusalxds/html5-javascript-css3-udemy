@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <link href="css/style.css" rel="stylesheet">
+  <script type="text/javascript">
+
+    function getId(id) {
+      return document.getElementById(id);
+    }
+
+    function play() {
+      var music = getId('music');
+      var btnPlay = getId('play');
+      var playPause = function () {
+        if (music.paused && !music.ended) {
+          music.play();
+          console.log('if');
+          btnPlay.innerHTML = '&#x2588; &#x2588;';
+        }
+        else {
+          music.pause();
+          console.log('else');
+          btnPlay.innerHTML = '&#x25B6;';
+        }
+      };
+
+      btnPlay.addEventListener('click', playPause, false);
+    }
+
+    function updateTrackTime() {
+      var music = document.getElementById('music');
+      var seconds = (music.currentTime % 60).toFixed(0);
+      seconds = (seconds >= 10) ? seconds : "0" + seconds;
+      var minutes = (Math.floor(music.currentTime / 60)).toFixed(0);
+      minutes = (minutes >= 10) ? minutes : "0" + minutes;
+      document.getElementById('trackTime').classList.add('trackTime');
+      document.getElementById('trackTime').innerHTML = minutes + ':' + seconds;
+    }
+
+    window.onload = play;
+  </script>
+</head>
+<body>
+<div class="myPlayer">
+  <h3>
+    My own player using Javascript to control all the functions
+  </h3>
+  <form>
+    <audio src="sounds/Poesia_Acustica_3_capricorniana.mp3" loop id="music" ontimeupdate="updateTrackTime()"></audio>
+    <div id="controller" class="controller">
+      <button id="play" class="btn"></button>
+      <span id="trackTime"/>
+    </div>
+  </form>
+</div>
+</body>
+</html>
