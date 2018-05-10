@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<article>
+  <header>
+    <h1>
+      About video
+    </h1>
+    <h3>
+      Attributes: (has the same attributes as the video)
+      <p>
+        poster: it'll set poster of video (initial img before start the video)
+      </p>
+    </h3>
+  </header>
+</article>
+<div>
+  <form>
+    <!-- <video src="video/video.mp4" controls width="300" height="300"></video> -->
+    <video poster="img/logo.png" controls width="300" height="300">
+    <source src="video/video.mp4" type="video/mp4">
+    <source src="video/video.ogv" type="video/ogg">
+      <p>Your browser can't support the format of video <a href="video/video.mp4">Download the video</a> </p>
+    </video>
+  </form>
+</div>
+</body>
+</html>
