@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Learning how the HTML5 works</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<article>
+  <header>
+    <h1>
+      Default
+    </h1>
+  </header>
+</article>
+<div>
+  <button type="button" onclick="showMaps()">Check location</button>
+  <img id="map" />
+</div>
+<script>
+  function showMaps() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(getCoordinates)
+    }
+  }
+
+  function getCoordinates(position) {
+    var lat = position.coords.latitude;
+    var long = position.coords.longitude;
+    var url = "https://maps.google.com/maps/api/staticmap?center=" + lat + "," + long + "&zoom=13&size=800x600&markers=color:blue|" + lat + "," + long + "&sensor=true";
+    // var url = "https://maps.google.com/maps/api/staticmap?center=-22.097577899999997,-46.188152699999996&zoom=13&size=800x600&markers=color:blue|-22.097577899999997,-46.188152699999996&sensor=true";
+    var map = document.getElementById('map');
+    map.src = url;
+    console.log('LAT -> ', lat);
+    console.log('LONG -> ', long);
+  }
+</script>
+</body>
+</html>
