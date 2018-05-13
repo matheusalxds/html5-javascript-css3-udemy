@@ -15,7 +15,7 @@
 </article>
 <div>
   <button type="button" onclick="showMaps()">Check location</button>
-  <div id="map" />
+  <div id="map"/>
 </div>
 <script>
   function showMaps() {
@@ -27,12 +27,18 @@
   function err(err) {
     var msg = "";
     switch (err.code) {
-      case 1: msg = "No permission"; break;
-      case 2: msg = "No connection"; break;
-      case 3: msg = "Timeout"; break;
-      default: msg = "Can't show the map";
+      case 1:
+        msg = "No permission";
+        break;
+      case 2:
+        msg = "No connection";
+        break;
+      case 3:
+        msg = "Timeout";
+        break;
+      default:
+        msg = "Can't show the map";
     }
-
     alert(`${msg} - code: ${err.code}`);
   }
 
@@ -40,11 +46,8 @@
     var lat = position.coords.latitude;
     var long = position.coords.longitude;
     var url = "https://maps.google.com/maps/api/staticmap?center=" + lat + "," + long + "&zoom=13&size=800x600&markers=color:blue|" + lat + "," + long + "&sensor=true";
-    // var url = "https://maps.google.com/maps/api/staticmap?center=-22.097577899999997,-46.188152699999996&zoom=13&size=800x600&markers=color:blue|-22.097577899999997,-46.188152699999996&sensor=true";
     var map = document.getElementById('map');
     map.src = url;
-    console.log('LAT -> ', lat);
-    console.log('LONG -> ', long);
   }
 </script>
 </body>
