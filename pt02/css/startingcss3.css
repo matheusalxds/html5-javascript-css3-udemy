@@ -1,0 +1,20 @@
+/* Lesson's */
+/* 01 */
+
+#text01 {
+  font-size: 50px;
+  font-family: Arial;
+  -webkit-text-fill-color: deepskyblue;
+  -webkit-text-stroke-color: blue ;
+  -webkit-text-stroke-width: 1px;
+}
+
+
+#text02 {
+  font-size: 50px;
+  font-family: Arial;
+  -webkit-text-fill-color: deepskyblue;
+  -webkit-text-stroke-color: blue ;
+  -webkit-text-stroke-width: 1px;
+  text-shadow: 6px 6px 6px #acacac;
+}
